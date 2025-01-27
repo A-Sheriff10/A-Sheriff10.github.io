@@ -1,19 +1,39 @@
 <html>
 <head>
 <title>Myth Of Molly</title>
+<script>
+function validateInput() {
+    const passcode = document.getElementById('passcode').value;
+    if (passcode === '84214') { //code comes from appending the bottom two rows of graves' binary numbers
+        window.location.href = 'home.html'; // Redirect to home.html
+    } else {
+        alert('Incorrect passcode. Please enter the correct code.');
+    }
+}
+</script>
+
+<style>
+body {
+	text-align: center;
+}
+
+h5 { 
+	color: white;
+}
+</style>
+
 </head>
 
 <body>
 <h1>Error 404</h1>
 <p>Oops! This page doesn't seem to exist anymore</p>
 <p>Please contact the website's administrator to find out why</p>
-<p>We apoloigse for the inconvenience</p>
+<p>We apologise for the inconvenience</p>
+<p>If you are the administrator: Please enter your administrative code in the box below</p>
+<input type="text" id="passcode">
+<input type="button" value="Submit" onclick="validateInput()">
 
-<!--
-
-webiste to download here
-
--->
+<h5>the bottom two rows of graves have seperated, you may need to append the bottom-halves to the tops</h5>
 
 </body>
 </html>
